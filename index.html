@@ -3,63 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rhyiel Webster D. Manuel | Futuristic Tech Portfolio</title>
+    <title>Rhyiel Webster D. Manuel | Award-Winning Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- INTERACTIVE NEURAL MESH CANVAS -->
-    <canvas id="neuralCanvas"></canvas>
+    <!-- INTERACTIVE BACKGROUND CANVAS -->
+    <canvas id="cyberCanvas"></canvas>
 
     <!-- FLOATING GLASS NAVBAR -->
     <header class="top-nav">
         <div class="nav-container">
             <a href="#home" class="logo">
-                <span class="logo-text">RWM</span>
-                <span class="logo-dot"></span>
+                <span class="logo-prefix">&lt;</span>RWM<span class="logo-suffix">/&gt;</span>
             </a>
             <nav class="nav-links">
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#skills">Skills</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
+                <a href="#home"><span>01.</span>Home</a>
+                <a href="#about"><span>02.</span>About</a>
+                <a href="#skills"><span>03.</span>Skills</a>
+                <a href="#projects"><span>04.</span>Projects</a>
+                <a href="#contact"><span>05.</span>Contact</a>
             </nav>
         </div>
-        <div class="nav-glow-bar"></div>
+        <div class="nav-glow-line"></div>
     </header>
 
     <main>
         <!-- HERO SECTION -->
         <section id="home" class="hero">
-            <div class="hero-orbit-wrapper">
-                <!-- ANIMATED ORBIT RINGS -->
-                <div class="orbit-ring ring-1"></div>
-                <div class="orbit-ring ring-2"></div>
-                
-                <div class="profile-frame">
-                    <img src="profile.jpeg" alt="Rhyiel Webster D Manuel" class="profile-img">
+            <div class="hero-avatar-wrapper">
+                <div class="glow-ring ring-primary"></div>
+                <div class="glow-ring ring-secondary"></div>
+                <div class="avatar-frame">
+                    <img src="profile.jpeg" alt="Rhyiel Webster D. Manuel" class="avatar-img">
                 </div>
             </div>
 
-            <div class="badge-tag">⚡ BSIT STUDENT & DEVELOPER</div>
+            <div class="status-badge">
+                <span class="pulse-dot"></span>
+                <span>OPEN FOR INTERNSHIP 2026</span>
+            </div>
 
-            <h1 class="hero-name">
+            <h1 class="hero-headline">
                 Rhyiel Webster <span class="gradient-text">D. Manuel</span>
             </h1>
 
-            <p class="hero-title">Building clean, responsive & futuristic digital experiences</p>
+            <p class="hero-tagline">Architecting Clean, Responsive & Next-Gen Digital Products</p>
             
-            <p class="hero-desc">
-                Second-year BSIT student seeking an internship opportunity to build impactful real-world software, optimize code, and collaborate with forward-thinking tech teams.
+            <p class="hero-description">
+                Second-year BSIT student at Nueva Vizcaya State University. Passionate about transforming ideas into elegant, accessible, and high-performance web applications.
             </p>
 
-            <div class="hero-buttons">
-                <a href="#projects" class="btn btn-cyber">
-                    <span>View Projects 🚀</span>
+            <div class="hero-actions">
+                <a href="#projects" class="btn btn-primary">
+                    <span>Explore Projects </span>
                 </a>
-                <a href="#contact" class="btn btn-neon">
-                    <span>Contact Me ✉️</span>
+                <a href="#contact" class="btn btn-secondary">
+                    <span>Initiate Contact </span>
                 </a>
             </div>
         </section>
@@ -67,25 +70,25 @@
         <!-- ABOUT SECTION -->
         <section id="about" class="section">
             <div class="container">
-                <h2 class="section-title"><span class="num">01.</span> About Me</h2>
-                <div class="card glass-holo">
-                    <div class="card-corner corner-tl"></div>
-                    <div class="card-corner corner-br"></div>
+                <h2 class="section-heading"><span class="heading-num">01.</span> About Me</h2>
+                <div class="card glass-card">
+                    <div class="corner-accent corner-tl"></div>
+                    <div class="corner-accent corner-br"></div>
                     <h3>Biography</h3>
-                    <p>I am Rhyiel Webster D. Manuel, a second-year Bachelor of Science in Information Technology student at Nueva Vizcaya State University. My journey in technology is driven by curiosity and a deep desire to build applications that are fast, accessible, and visual masterworks.</p>
+                    <p>I am Rhyiel Webster D. Manuel, an Information Technology student specializing in modern web technologies. I thrive on solving complex frontend design challenges, writing clean code, and creating intuitive user interfaces that leave a lasting impression.</p>
                     
-                    <div class="info-grid">
-                        <div class="info-box">
-                            <span class="info-label">INSTITUTION</span>
-                            <span class="info-val">Nueva Vizcaya State University</span>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <span class="stat-label">LOCATION</span>
+                            <span class="stat-value">Nueva Vizcaya, PH</span>
                         </div>
-                        <div class="info-box">
-                            <span class="info-label">DEGREE</span>
-                            <span class="info-val">BS in Information Technology</span>
+                        <div class="stat-card">
+                            <span class="stat-label">EDUCATION</span>
+                            <span class="stat-value">BSIT 2nd Year (NVSU)</span>
                         </div>
-                        <div class="info-box">
-                            <span class="info-label">TARGET ROLE</span>
-                            <span class="info-val">Front-End / Full-Stack Intern</span>
+                        <div class="stat-card">
+                            <span class="stat-label">FOCUS</span>
+                            <span class="stat-value">Frontend & UI/UX</span>
                         </div>
                     </div>
                 </div>
@@ -95,30 +98,30 @@
         <!-- SKILLS SECTION -->
         <section id="skills" class="section">
             <div class="container">
-                <h2 class="section-title"><span class="num">02.</span> Tech Stack</h2>
+                <h2 class="section-heading"><span class="heading-num">02.</span> Technical Stack</h2>
                 <div class="grid">
-                    <div class="card glass-holo skill-card">
-                        <div class="card-corner corner-tl"></div>
-                        <div class="card-corner corner-br"></div>
-                        <div class="skill-icon">💻</div>
-                        <h3>Frontend Languages</h3>
-                        <p>HTML5, CSS3, Modern JavaScript (ES6+)</p>
+                    <div class="card glass-card">
+                        <div class="corner-accent corner-tl"></div>
+                        <div class="corner-accent corner-br"></div>
+                        <div class="card-icon"></div>
+                        <h3>Frontend Technologies</h3>
+                        <p>HTML5, CSS3 (Flexbox/Grid), JavaScript (ES6+), Responsive Layouts, Animations</p>
                     </div>
 
-                    <div class="card glass-holo skill-card">
-                        <div class="card-corner corner-tl"></div>
-                        <div class="card-corner corner-br"></div>
-                        <div class="skill-icon">🛠️</div>
-                        <h3>Tools & Workflow</h3>
-                        <p>Git, GitHub, VS Code, JSON, GitHub Desktop</p>
+                    <div class="card glass-card">
+                        <div class="corner-accent corner-tl"></div>
+                        <div class="corner-accent corner-br"></div>
+                        <div class="card-icon">🛠️</div>
+                        <h3>Developer Tools</h3>
+                        <p>Git, GitHub, GitHub Desktop, VS Code, JSON Data Handling, Chrome DevTools</p>
                     </div>
 
-                    <div class="card glass-holo skill-card">
-                        <div class="card-corner corner-tl"></div>
-                        <div class="card-corner corner-br"></div>
-                        <div class="skill-icon">⚙️</div>
-                        <h3>Technical Skills</h3>
-                        <p>Responsive Web Design, REST API Integration, Debugging</p>
+                    <div class="card glass-card">
+                        <div class="corner-accent corner-tl"></div>
+                        <div class="corner-accent corner-br"></div>
+                        <div class="card-icon"></div>
+                        <h3>Core Competencies</h3>
+                        <p>Clean Code Architecture, API Fetching, UI/UX Optimization, Problem Solving</p>
                     </div>
                 </div>
             </div>
@@ -127,14 +130,14 @@
         <!-- PROJECTS SECTION -->
         <section id="projects" class="section">
             <div class="container">
-                <h2 class="section-title"><span class="num">03.</span> Projects</h2>
+                <h2 class="section-heading"><span class="heading-num">03.</span> Featured Work</h2>
                 <div class="grid">
-                    <div class="card glass-holo project-card">
-                        <div class="card-corner corner-tl"></div>
-                        <div class="card-corner corner-br"></div>
-                        <div class="project-tag">FEATURED WORK</div>
-                        <h3>📄 Interactive Internship Portfolio</h3>
-                        <p>An animated, high-performance web showcase featuring custom particle canvases, glassmorphic UI elements, and responsive layout structures.</p>
+                    <div class="card glass-card project-card">
+                        <div class="corner-accent corner-tl"></div>
+                        <div class="corner-accent corner-br"></div>
+                        <span class="project-category">WEB DEVELOPMENT</span>
+                        <h3>📄 Next-Gen Interactive Portfolio</h3>
+                        <p>An interactive, high-performance web portfolio featuring custom particle physics, glassmorphic UI cards, floating responsive elements, and optimized loading.</p>
                     </div>
                 </div>
             </div>
@@ -143,28 +146,28 @@
         <!-- CONTACT SECTION -->
         <section id="contact" class="section">
             <div class="container">
-                <h2 class="section-title"><span class="num">04.</span> Connect</h2>
-                <div class="card glass-holo form-card">
-                    <div class="card-corner corner-tl"></div>
-                    <div class="card-corner corner-br"></div>
+                <h2 class="section-heading"><span class="heading-num">04.</span> Get In Touch</h2>
+                <div class="card glass-card form-container">
+                    <div class="corner-accent corner-tl"></div>
+                    <div class="corner-accent corner-br"></div>
                     <form action="mailto:rhyiel@example.com" method="POST" enctype="text/plain">
-                        <div class="input-group">
+                        <div class="form-group">
                             <input type="text" id="name" name="name" required placeholder=" ">
                             <label for="name">Your Name</label>
                         </div>
 
-                        <div class="input-group">
+                        <div class="form-group">
                             <input type="email" id="email" name="email" required placeholder=" ">
-                            <label for="email">Your Email</label>
+                            <label for="email">Your Email Address</label>
                         </div>
 
-                        <div class="input-group">
+                        <div class="form-group">
                             <textarea id="message" name="message" rows="4" required placeholder=" "></textarea>
                             <label for="message">Your Message</label>
                         </div>
 
-                        <button type="submit" class="btn btn-cyber full-width">
-                            <span>Transmit Message ⚡</span>
+                        <button type="submit" class="btn btn-primary full-width">
+                            <span>Send Message </span>
                         </button>
                     </form>
                 </div>
@@ -173,38 +176,47 @@
     </main>
 
     <footer>
-        <p>&copy; 2026 Rhyiel Webster D. Manuel. Engineered with Precision. ⚡🌌✨</p>
+        <p>&copy; 2026 Rhyiel Webster D. Manuel. Designed for Excellence. </p>
     </footer>
 
-    <!-- DYNAMIC NEURAL CANVAS ANIMATION -->
+    <!-- HIGH-PERFORMANCE CANVAS BACKGROUND SCRIPT -->
     <script>
-        const canvas = document.getElementById('neuralCanvas');
+        const canvas = document.getElementById('cyberCanvas');
         const ctx = canvas.getContext('2d');
 
-        function resize() {
+        function resizeCanvas() {
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
         }
-        window.addEventListener('resize', resize);
-        resize();
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
 
-        let mouse = { x: null, y: null, radius: 150 };
+        const mouse = { x: null, y: null, radius: 140 };
         window.addEventListener('mousemove', (e) => {
             mouse.x = e.x;
             mouse.y = e.y;
         });
 
-        const nodes = [];
-        const nodeCount = Math.floor((window.innerWidth * window.innerHeight) / 18000);
-
-        class Node {
+        class Particle {
             constructor() {
                 this.x = Math.random() * canvas.width;
                 this.y = Math.random() * canvas.height;
-                this.radius = Math.random() * 2 + 1;
-                this.vx = (Math.random() - 0.5) * 0.8;
-                this.vy = (Math.random() - 0.5) * 0.8;
+                this.size = Math.random() * 2 + 1;
+                this.baseX = this.x;
+                this.baseY = this.y;
+                this.vx = (Math.random() - 0.5) * 0.6;
+                this.vy = (Math.random() - 0.5) * 0.6;
                 this.color = Math.random() > 0.5 ? '#ff52a8' : '#00f2fe';
+            }
+
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fillStyle = this.color;
+                ctx.shadowBlur = 10;
+                ctx.shadowColor = this.color;
+                ctx.fill();
+                ctx.shadowBlur = 0;
             }
 
             update() {
@@ -213,41 +225,43 @@
 
                 if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
                 if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
-            }
 
-            draw() {
-                ctx.beginPath();
-                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-                ctx.fillStyle = this.color;
-                ctx.shadowBlur = 8;
-                ctx.shadowColor = this.color;
-                ctx.fill();
-                ctx.shadowBlur = 0;
+                // Mouse interaction
+                if (mouse.x && mouse.y) {
+                    let dx = mouse.x - this.x;
+                    let dy = mouse.y - this.y;
+                    let distance = Math.sqrt(dx * dx + dy * dy);
+                    if (distance < mouse.radius) {
+                        this.x -= dx * 0.03;
+                        this.y -= dy * 0.03;
+                    }
+                }
             }
         }
 
-        for (let i = 0; i < nodeCount; i++) {
-            nodes.push(new Node());
+        const particleArray = [];
+        const count = Math.floor((window.innerWidth * window.innerHeight) / 16000);
+        for (let i = 0; i < count; i++) {
+            particleArray.push(new Particle());
         }
 
         function animate() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
+            for (let i = 0; i < particleArray.length; i++) {
+                particleArray[i].update();
+                particleArray[i].draw();
 
-            for (let a = 0; a < nodes.length; a++) {
-                nodes[a].update();
-                nodes[a].draw();
-
-                for (let b = a; b < nodes.length; b++) {
-                    let dx = nodes[a].x - nodes[b].x;
-                    let dy = nodes[a].y - nodes[b].y;
+                for (let j = i; j < particleArray.length; j++) {
+                    let dx = particleArray[i].x - particleArray[j].x;
+                    let dy = particleArray[i].y - particleArray[j].y;
                     let dist = Math.sqrt(dx * dx + dy * dy);
 
-                    if (dist < 120) {
+                    if (dist < 110) {
                         ctx.beginPath();
-                        ctx.strokeStyle = `rgba(157, 78, 221, ${1 - dist / 120})`;
+                        ctx.strokeStyle = `rgba(157, 78, 221, ${1 - dist / 110})`;
                         ctx.lineWidth = 0.6;
-                        ctx.moveTo(nodes[a].x, nodes[a].y);
-                        ctx.lineTo(nodes[b].x, nodes[b].y);
+                        ctx.moveTo(particleArray[i].x, particleArray[i].y);
+                        ctx.lineTo(particleArray[j].x, particleArray[j].y);
                         ctx.stroke();
                     }
                 }
