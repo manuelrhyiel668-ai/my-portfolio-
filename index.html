@@ -1,80 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rhyiel Webster D. Manuel | Award-Winning Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
-
-    <!-- INTERACTIVE BACKGROUND CANVAS -->
-    <canvas id="cyberCanvas"></canvas>
-
-    <!-- FLOATING GLASS NAVBAR -->
-    <header class="top-nav">
-        <div class="nav-container">
-            <a href="#home" class="logo">
-                <span class="logo-prefix">&lt;</span>RWM<span class="logo-suffix">/&gt;</span>
-            </a>
-            <nav class="nav-links">
-                <a href="#home"><span>01.</span>Home</a>
-                <a href="#about"><span>02.</span>About</a>
-                <a href="#skills"><span>03.</span>Skills</a>
-                <a href="#projects"><span>04.</span>Projects</a>
-                <a href="#contact"><span>05.</span>Contact</a>
-            </nav>
-        </div>
-        <div class="nav-glow-line"></div>
-    </header>
-
-    <main>
-        <!-- HERO SECTION -->
-        <section id="home" class="hero">
-            <div class="hero-avatar-wrapper">
-                <div class="glow-ring ring-primary"></div>
-                <div class="glow-ring ring-secondary"></div>
-                <div class="avatar-frame">
-                    <img src="profile.jpeg" alt="Rhyiel Webster D. Manuel" class="avatar-img">
-                </div>
-            </div>
-
-            <div class="status-badge">
-                <span class="pulse-dot"></span>
-                <span>OPEN FOR INTERNSHIP 2026</span>
-            </div>
-
-            <h1 class="hero-headline">
-                Rhyiel Webster <span class="gradient-text">D. Manuel</span>
-            </h1>
-
-            <p class="hero-tagline">BSIT Student & Aspiring Web Developer</p>
-            
-            <p class="hero-description">
-                Second-year Bachelor of Science in Information Technology student at Nueva Vizcaya State University. Passionate about turning ideas into clean, working web pages.
-            </p>
-
-            <div class="hero-actions">
-                <a href="#projects" class="btn btn-primary">
-                    <span>Explore Projects </span>
-                </a>
-                <a href="#contact" class="btn btn-secondary">
-                    <span>Initiate Contact </span>
-                </a>
-            </div>
-        </section>
-
-        <!-- ABOUT SECTION -->
+<!-- ABOUT SECTION -->
         <section id="about" class="section">
             <div class="container">
                 <h2 class="section-heading"><span class="heading-num">01.</span> About Me</h2>
                 
-                <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
+                <div class="about-stack">
                     <!-- Biography Card -->
-                    <div class="card glass-card" style="margin-bottom: 0;">
+                    <div class="card glass-card">
                         <div class="corner-accent corner-tl"></div>
                         <div class="corner-accent corner-br"></div>
                         <h3>Biography & Goals</h3>
@@ -83,200 +14,31 @@
                     </div>
 
                     <!-- Educational Background Card -->
-                    <div class="card glass-card" style="margin-bottom: 0;">
+                    <div class="card glass-card">
                         <div class="corner-accent corner-tl"></div>
                         <div class="corner-accent corner-br"></div>
                         <h3>Educational Background</h3>
-                        <ul style="list-style: none; padding: 0; display: grid; gap: 12px; margin-top: 1rem;">
+                        <ul style="list-style: none; padding: 0; display: grid; gap: 14px; margin-top: 1rem;">
                             <li style="border-left: 3px solid var(--pink); padding-left: 12px;">
-                                <strong style="color: var(--cyan); display: block; font-size: 0.9rem;">Elementary</strong>
-                                <span style="font-size: 0.85rem; color: var(--text-secondary);">Nagcuartelan Elementary School</span>
+                                <strong style="color: var(--cyan); display: block; font-size: 0.95rem;">Elementary</strong>
+                                <span style="font-size: 0.9rem; color: var(--text-secondary);">Nagcuartelan Elementary School</span>
                             </li>
                             <li style="border-left: 3px solid var(--purple); padding-left: 12px;">
-                                <strong style="color: var(--cyan); display: block; font-size: 0.9rem;">High School & Senior High</strong>
-                                <span style="font-size: 0.85rem; color: var(--text-secondary);">Nueva Vizcaya Institute High School</span>
+                                <strong style="color: var(--cyan); display: block; font-size: 0.95rem;">High School & Senior High</strong>
+                                <span style="font-size: 0.9rem; color: var(--text-secondary);">Nueva Vizcaya Institute High School</span>
                             </li>
                             <li style="border-left: 3px solid var(--cyan); padding-left: 12px;">
-                                <strong style="color: var(--cyan); display: block; font-size: 0.9rem;">College (BSIT)</strong>
-                                <span style="font-size: 0.85rem; color: var(--text-secondary);">Nueva Vizcaya State University (Expected: 2028)</span>
+                                <strong style="color: var(--cyan); display: block; font-size: 0.95rem;">College (BSIT)</strong>
+                                <span style="font-size: 0.9rem; color: var(--text-secondary);">Nueva Vizcaya State University (Expected: 2028)</span>
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
-
-        <!-- SKILLS SECTION -->
-        <section id="skills" class="section">
-            <div class="container">
-                <h2 class="section-heading"><span class="heading-num">02.</span> Technical Stack</h2>
-                <div class="grid">
-                    <div class="card glass-card">
-                        <div class="corner-accent corner-tl"></div>
-                        <div class="corner-accent corner-br"></div>
-                        <div class="card-icon"></div>
-                        <h3>Programming Languages</h3>
-                        <p>HTML, CSS, JavaScript</p>
-                    </div>
-
-                    <div class="card glass-card">
-                        <div class="corner-accent corner-tl"></div>
-                        <div class="corner-accent corner-br"></div>
-                        <div class="card-icon">🛠️</div>
-                        <h3>Tools & Technologies</h3>
-                        <p>Git, GitHub, GitHub Desktop, VS Code, JSON</p>
-                    </div>
-
-                    <div class="card glass-card">
-                        <div class="corner-accent corner-tl"></div>
-                        <div class="corner-accent corner-br"></div>
-                        <div class="card-icon"></div>
-                        <h3>Technical Skills</h3>
-                        <p>Responsive web design, building web pages, fetching data from APIs</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- PROJECTS SECTION -->
-        <section id="projects" class="section">
-            <div class="container">
-                <h2 class="section-heading"><span class="heading-num">03.</span> Featured Work</h2>
-                <div class="grid">
-                    <div class="card glass-card project-card">
-                        <div class="corner-accent corner-tl"></div>
-                        <div class="corner-accent corner-br"></div>
-                        <span class="project-category">WEB DEVELOPMENT</span>
-                        <h3> Internship Portfolio</h3>
-                        <p>A responsive personal portfolio website showcasing my education, skills, and goals for internship applications.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CONTACT SECTION -->
-        <section id="contact" class="section">
-            <div class="container">
-                <h2 class="section-heading"><span class="heading-num">04.</span> Get In Touch</h2>
-                <div class="card glass-card form-container">
-                    <div class="corner-accent corner-tl"></div>
-                    <div class="corner-accent corner-br"></div>
-                    <form action="mailto:rhyiel@example.com" method="POST" enctype="text/plain" id="contactForm">
-                        <div class="form-group">
-                            <input type="text" id="name" name="name" required placeholder=" ">
-                            <label for="name">Your Name</label>
-                        </div>
-
-                        <div class="form-group">
-                            <input type="email" id="email" name="email" required placeholder=" ">
-                            <label for="email">Your Email Address</label>
-                        </div>
-
-                        <div class="form-group">
-                            <textarea id="message" name="message" rows="4" required placeholder=" "></textarea>
-                            <label for="message">Your Message</label>
-                        </div>
-
-                        <button type="submit" class="btn btn-primary full-width">
-                            <span>Send Message ⚡</span>
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2026 Rhyiel Webster D. Manuel. All rights reserved. </p>
-    </footer>
-
-    <!-- HIGH-PERFORMANCE CANVAS BACKGROUND SCRIPT -->
-    <script>
-        const canvas = document.getElementById('cyberCanvas');
-        const ctx = canvas.getContext('2d');
-
-        function resizeCanvas() {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        }
-        window.addEventListener('resize', resizeCanvas);
-        resizeCanvas();
-
-        const mouse = { x: null, y: null, radius: 140 };
-        window.addEventListener('mousemove', (e) => {
-            mouse.x = e.clientX;
-            mouse.y = e.clientY;
-        });
-
-        class Particle {
-            constructor() {
-                this.x = Math.random() * canvas.width;
-                this.y = Math.random() * canvas.height;
-                this.size = Math.random() * 2 + 1;
-                this.vx = (Math.random() - 0.5) * 0.6;
-                this.vy = (Math.random() - 0.5) * 0.6;
-                this.color = Math.random() > 0.5 ? '#ff52a8' : '#00f2fe';
-            }
-
-            draw() {
-                ctx.beginPath();
-                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-                ctx.fillStyle = this.color;
-                ctx.shadowBlur = 10;
-                ctx.shadowColor = this.color;
-                ctx.fill();
-                ctx.shadowBlur = 0;
-            }
-
-            update() {
-                this.x += this.vx;
-                this.y += this.vy;
-
-                if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
-                if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
-
-                if (mouse.x && mouse.y) {
-                    let dx = mouse.x - this.x;
-                    let dy = mouse.y - this.y;
-                    let distance = Math.sqrt(dx * dx + dy * dy);
-                    if (distance < mouse.radius) {
-                        this.x -= dx * 0.03;
-                        this.y -= dy * 0.03;
-                    }
-                }
-            }
-        }
-
-        const particleArray = [];
-        const count = Math.floor((window.innerWidth * window.innerHeight) / 16000);
-        for (let i = 0; i < count; i++) {
-            particleArray.push(new Particle());
-        }
-
-        function animate() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            for (let i = 0; i < particleArray.length; i++) {
-                particleArray[i].update();
-                particleArray[i].draw();
-
-                for (let j = i; j < particleArray.length; j++) {
-                    let dx = particleArray[i].x - particleArray[j].x;
-                    let dy = particleArray[i].y - particleArray[j].y;
-                    let dist = Math.sqrt(dx * dx + dy * dy);
-
-                    if (dist < 110) {
-                        ctx.beginPath();
-                        ctx.strokeStyle = `rgba(157, 78, 221, ${1 - dist / 110})`;
-                        ctx.lineWidth = 0.6;
-                        ctx.moveTo(particleArray[i].x, particleArray[i].y);
-                        ctx.lineTo(particleArray[j].x, particleArray[j].y);
-                        ctx.stroke();
-                    }
-                }
-            }
-            requestAnimationFrame(animate);
-        }
-        animate();
-    </script>
-</body>
-    </html>
+        /* ===== ABOUT SECTION STACK LAYOUT ===== */
+.about-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
