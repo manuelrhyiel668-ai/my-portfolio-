@@ -2,542 +2,144 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Portfolio of Rhyiel Webster D Manuel, second-year BSIT student looking for an internship.">
     <title>Rhyiel Webster D Manuel | Internship Portfolio</title>
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Trebuchet MS', sans-serif;
-            scroll-behavior: smooth;
-        }
-
-        :root {
-            --primary: #7c3aed;
-            --secondary: #6d28d9;
-            --light: #f5f3ff;
-            --dark: #1f2937;
-            --accent: #c4b5fd;
-        }
-
-        body {
-            background: var(--light);
-            color: var(--dark);
-        }
-
-        .sidebar {
-            position: fixed;
-            left: 0;
-            top: 0;
-            width: 240px;
-            height: 100vh;
-            background: linear-gradient(180deg, var(--primary), var(--secondary));
-            color: white;
-            padding: 2rem 1.5rem;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            box-shadow: 4px 0 15px rgba(109, 40, 217, 0.2);
-            z-index: 100;
-        }
-
-        .sidebar-logo {
-            margin-bottom: 2.5rem;
-        }
-
-        .sidebar h2 {
-            font-size: 1.4rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .sidebar p {
-            font-size: 0.85rem;
-            opacity: 0.85;
-            margin-bottom: 2rem;
-        }
-
-        .sidebar-nav {
-            list-style: none;
-            width: 100%;
-        }
-
-        .sidebar-nav li {
-            margin-bottom: 0.6rem;
-        }
-
-        .sidebar-nav a {
-            color: white;
-            text-decoration: none;
-            display: block;
-            padding: 0.8rem 1rem;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-            font-size: 0.95rem;
-        }
-
-        .sidebar-nav a:hover {
-            background: rgba(255, 255, 255, 0.2);
-            transform: translateX(5px);
-        }
-
-        .main-content {
-            margin-left: 240px;
-            min-height: 100vh;
-        }
-
-        .hero {
-            padding: 4rem 3rem;
-            background: linear-gradient(135deg, #f5f3ff, #ede9fe, #ddd6fe);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 3rem;
-            min-height: 100vh;
-        }
-
-        .profile-container {
-            flex-shrink: 0;
-            width: 220px;
-            height: 220px;
-            border-radius: 50%;
-            overflow: hidden;
-            border: 6px solid var(--primary);
-            box-shadow: 0 0 30px rgba(124, 58, 237, 0.35);
-            transition: transform 0.3s ease;
-        }
-
-        .profile-container:hover {
-            transform: scale(1.03);
-        }
-
-        .profile-pic {
-            display: block;
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            object-fit: cover;
-            object-position: center;
-        }
-
-        .hero-text {
-            max-width: 550px;
-            text-align: left;
-        }
-
-        .hero-text h1 {
-            font-size: 2.8rem;
-            color: var(--secondary);
-            margin-bottom: 0.5rem;
-            line-height: 1.2;
-            overflow-wrap: anywhere;
-        }
-
-        .hero-text h1 span.pop {
-            color: var(--primary);
-        }
-
-        .hero-text h3 {
-            font-size: 1.2rem;
-            font-weight: 500;
-            margin-bottom: 1.2rem;
-            color: var(--primary);
-        }
-
-        .hero-text p {
-            line-height: 1.6;
-            margin-bottom: 1.5rem;
-            opacity: 0.9;
-        }
-
-        .btn {
-            display: inline-block;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: white;
-            padding: 0.85rem 2rem;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            border: none;
-            font-size: 1rem;
-            margin-right: 0.5rem;
-        }
-
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(124, 58, 237, 0.35);
-        }
-
-        section {
-            padding: 4rem 3rem;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        section h2 {
-            text-align: center;
-            font-size: 2rem;
-            color: var(--secondary);
-            margin-bottom: 2.5rem;
-            position: relative;
-        }
-
-        section h2::after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 3px;
-            background: var(--primary);
-            margin: 0.8rem auto 0;
-            border-radius: 3px;
-        }
-
-        .about-grid, .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .box, .skill-card, .project-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 16px;
-            box-shadow: 0 4px 15px rgba(124, 58, 237, 0.08);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .box:hover, .skill-card:hover, .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 20px rgba(124, 58, 237, 0.15);
-        }
-
-        .box h3 {
-            color: var(--primary);
-            margin-bottom: 1rem;
-            font-size: 1.2rem;
-        }
-
-        .box p, .box li {
-            line-height: 1.6;
-            color: var(--dark);
-            opacity: 0.85;
-        }
-
-        .timeline {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .timeline li {
-            margin-bottom: 0.8rem;
-            padding-left: 1rem;
-            border-left: 3px solid var(--accent);
-        }
-
-        .timeline li b {
-            display: block;
-            color: var(--secondary);
-        }
-
-        .chips {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            list-style: none;
-            padding: 0;
-        }
-
-        .chips li {
-            background: var(--light);
-            color: var(--primary);
-            padding: 0.4rem 0.9rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            border: 1px solid var(--accent);
-        }
-
-        form {
-            max-width: 520px;
-            margin: 0 auto;
-            background: white;
-            padding: 2.5rem;
-            border-radius: 16px;
-            box-shadow: 0 4px 15px rgba(124, 58, 237, 0.08);
-        }
-
-        form label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-            color: var(--dark);
-            font-size: 0.98rem;
-        }
-
-        form input,
-        form textarea {
-            width: 100%;
-            padding: 0.9rem;
-            margin-bottom: 1.2rem;
-            border: 1px solid var(--accent);
-            border-radius: 8px;
-            background: #fcfbff;
-            font-size: 0.98rem;
-            transition: border-color 0.3s ease;
-        }
-
-        form input:focus,
-        form textarea:focus {
-            outline: none;
-            border-color: var(--primary);
-        }
-
-        form textarea {
-            resize: vertical;
-            min-height: 120px;
-        }
-
-        form button {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: white;
-            border: none;
-            padding: 0.9rem 2rem;
-            border-radius: 8px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-size: 1rem;
-            width: 100%;
-        }
-
-        form button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 15px rgba(124, 58, 237, 0.25);
-        }
-
-        footer {
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
-            color: white;
-            text-align: center;
-            padding: 2rem;
-            margin-left: 240px;
-            font-size: 0.95rem;
-        }
-
-        @media (max-width: 900px) {
-            .hero {
-                flex-direction: column;
-                text-align: center;
-                padding: 3rem 2rem;
-            }
-
-            .hero-text {
-                text-align: center;
-            }
-
-            .hero-text h1 {
-                font-size: 2.3rem;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .sidebar {
-                position: relative;
-                width: 100%;
-                height: auto;
-                flex-direction: row;
-                flex-wrap: wrap;
-                justify-content: space-between;
-                padding: 1rem 1.5rem;
-            }
-
-            .sidebar-logo {
-                margin-bottom: 0;
-                text-align: left;
-            }
-
-            .sidebar h2 {
-                font-size: 1.1rem;
-                margin-bottom: 0;
-            }
-
-            .sidebar p {
-                display: none;
-            }
-
-            .sidebar-nav {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 0.5rem;
-                justify-content: flex-end;
-                width: auto;
-            }
-
-            .sidebar-nav a {
-                padding: 0.5rem 0.8rem;
-                font-size: 0.88rem;
-            }
-
-            .main-content,
-            footer {
-                margin-left: 0;
-            }
-
-            .hero {
-                padding: 2.5rem 1.5rem;
-                gap: 1.5rem;
-                min-height: auto;
-            }
-
-            .profile-container {
-                width: 160px;
-                height: 160px;
-            }
-
-            .hero-text h1 {
-                font-size: 2rem;
-            }
-
-            section {
-                padding: 2.5rem 1.5rem;
-            }
-
-            form {
-                padding: 1.5rem;
-                margin: 0 1rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- SIDEBAR NAVIGATION -->
-    <aside class="sidebar">
-        <div class="sidebar-logo">
-            <h2>Rhyiel's Portfolio</h2>
-            <p>2nd-year BSIT • Intern Seeker</p>
+  <!-- NAVIGATION -->
+  <aside class="sidebar">
+    <div class="sidebar-logo">
+        <h2>Rhyiel's Portfolio</h2>
+        <p>2nd-year BSIT • Intern Seeker</p>
+    </div>
+    <ul class="sidebar-nav">
+        <li><a href="#home">🏠 Home</a></li>
+        <li><a href="#about">👤 About</a></li>
+        <li><a href="#skills">🛠️ Skills</a></li>
+        <li><a href="#projects">📁 Projects</a></li>
+        <li><a href="#contact">✉️ Contact</a></li>
+    </ul>
+  </aside>
+
+  <main class="main-content">
+
+    <!-- HOME -->
+    <section id="home" class="hero-section">
+      <div class="container hero">
+        <div class="hero-copy">
+          <h1><span>Rhyiel</span> <span class="pop">Webster</span> <span>Manuel</span></h1>
+          <p class="tagline">Second-year BSIT student who builds clean, responsive websites</p>
+          <p class="intro">I am looking for an internship where I can apply what I have learned, work on real projects with a supportive team, and keep improving my skills. I enjoy turning ideas into clean, working web pages.</p>
+          <div class="actions">
+            <a class="btn solid" href="#projects">View my projects 🚀</a>
+            <a class="btn" href="#contact">Contact me ✉️</a>
+          </div>
         </div>
+        <figure class="photo-frame">
+          <img class="hero-photo" src="mypicture.jpg" alt="Photo of Rhyiel Webster Manuel">
+        </figure>
+      </div>
+    </section>
 
-        <ul class="sidebar-nav">
-            <li><a href="#home">🏠 Home</a></li>
-            <li><a href="#about">👤 About</a></li>
-            <li><a href="#skills">🛠️ Skills</a></li>
-            <li><a href="#projects">📁 Projects</a></li>
-            <li><a href="#contact">✉️ Contact</a></li>
-        </ul>
-    </aside>
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title">About</h2>
+        <div class="about-grid">
+          <article class="box area-bio">
+            <h3>Biography</h3>
+            <p>I am Rhyiel Webster D Manuel, a second-year Bachelor of Science in Information Technology student at Nueva Vizcaya State University. I got into technology through curiosity about how apps and websites are made, and I now build small projects with HTML, CSS, and JavaScript. I like learning by making things and fixing my own mistakes.</p>
+          </article>
 
-    <main class="main-content">
+          <article class="box area-edu">
+            <h3>Education</h3>
+            <ol class="timeline">
+              <li><b>Elementary</b><span>Nagcuartelan Elementary School</span></li>
+              <li><b>High School</b><span>Nueva Vizcaya Institute High School</span></li>
+              <li><b>Senior High School</b><span>Nueva Vizcaya Institute High School</span></li>
+              <li><b>College</b><span>Nueva Vizcaya State University, BS Information Technology (expected graduation: 2028)</span></li>
+            </ol>
+          </article>
 
-        <!-- HOME -->
-        <section id="home" class="hero">
-            <div class="profile-container">
-                <img class="profile-pic" src="images/mypicture.jpg" alt="Photo of Rhyiel Webster Manuel">
-            </div>
+          <article class="box area-goals">
+            <h3>Career Goals</h3>
+            <p>My goal is to start my career as a front-end developer through an internship, then grow into a full-stack role. I want to build websites and apps that are easy to use and that help students and people in my community.</p>
+          </article>
 
-            <div class="hero-text">
-                <h1><span>Rhyiel</span> <span class="pop">Webster</span> <span>Manuel</span></h1>
-                <h3>Second-year BSIT student who builds clean, responsive websites</h3>
-                <p>I am looking for an internship where I can apply what I have learned, work on real projects with a supportive team, and keep improving my skills. I enjoy turning ideas into clean, working web pages.</p>
-                <div class="actions">
-                    <a class="btn" href="#projects">View my projects 🚀</a>
-                    <a class="btn" href="#contact">Contact me ✉️</a>
-                </div>
-            </div>
-        </section>
+          <article class="box area-int">
+            <h3>Interests</h3>
+            <ul class="chips">
+              <li>Web design</li>
+              <li>Open source</li>
+              <li>Problem solving</li>
+              <li>Learning new tools</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
 
-        <!-- ABOUT -->
-        <section id="about">
-            <h2>About Me</h2>
-            <div class="about-grid">
-                <article class="box">
-                    <h3>Biography</h3>
-                    <p>I am Rhyiel Webster D Manuel, a second-year Bachelor of Science in Information Technology student at Nueva Vizcaya State University. I got into technology through curiosity about how apps and websites are made, and I now build small projects with HTML, CSS, and JavaScript. I like learning by making things and fixing my own mistakes.</p>
-                </article>
+    <!-- SKILLS -->
+    <section id="skills" class="section tinted">
+      <div class="container">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills-grid">
+          <article class="box">
+            <h3>Programming languages</h3>
+            <ul class="chips"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+          </article>
+          <article class="box">
+            <h3>Tools and technologies</h3>
+            <ul class="chips"><li>Git</li><li>GitHub</li><li>GitHub Desktop</li><li>VS Code</li><li>JSON</li></ul>
+          </article>
+          <article class="box">
+            <h3>Technical skills</h3>
+            <ul class="chips"><li>Responsive web design</li><li>Building web pages</li><li>Fetching data from APIs</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
 
-                <article class="box">
-                    <h3>Education</h3>
-                    <ol class="timeline">
-                        <li><b>Elementary</b><span>Nagcuartelan Elementary School</span></li>
-                        <li><b>High School</b><span>Nueva Vizcaya Institute High School</span></li>
-                        <li><b>Senior High School</b><span>Nueva Vizcaya Institute High School</span></li>
-                        <li><b>College</b><span>Nueva Vizcaya State University, BS Information Technology (expected graduation: 2028)</span></li>
-                    </ol>
-                </article>
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="section-title">Projects</h2>
+        <div class="skills-grid">
+          <article class="box">
+            <h3>📄 Internship Portfolio</h3>
+            <p>A responsive personal portfolio website showcasing my education, skills, and goals for internship applications.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-                <article class="box">
-                    <h3>Career Goals</h3>
-                    <p>My goal is to start my career as a front-end developer through an internship, then grow into a full-stack role. I want to build websites and apps that are easy to use and that help students and people in my community.</p>
-                </article>
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 class="section-title">Get In Touch</h2>
+        <form action="mailto:rhyiel@example.com" method="POST" enctype="text/plain">
+            <label for="name">Your Full Name</label>
+            <input type="text" id="name" name="name" required placeholder="Enter your name">
 
-                <article class="box">
-                    <h3>Interests</h3>
-                    <ul class="chips">
-                        <li>Web design</li>
-                        <li>Open source</li>
-                        <li>Problem solving</li>
-                        <li>Learning new tools</li>
-                    </ul>
-                </article>
-            </div>
-        </section>
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required placeholder="your.email@example.com">
 
-        <!-- SKILLS -->
-        <section id="skills">
-            <h2>🛠️ Skills & Technologies</h2>
-            <div class="grid">
-                <article class="box">
-                    <h3>Programming Languages</h3>
-                    <ul class="chips"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
-                </article>
-                <article class="box">
-                    <h3>Tools & Technologies</h3>
-                    <ul class="chips"><li>Git</li><li>GitHub</li><li>GitHub Desktop</li><li>VS Code</li><li>JSON</li></ul>
-                </article>
-                <article class="box">
-                    <h3>Technical Skills</h3>
-                    <ul class="chips"><li>Responsive web design</li><li>Building web pages</li><li>Fetching data from APIs</li></ul>
-                </article>
-            </div>
-        </section>
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" rows="4" required placeholder="Write your message here..."></textarea>
 
-        <!-- PROJECTS -->
-        <section id="projects">
-            <h2>📁 Projects</h2>
-            <div class="grid">
-                <div class="project-card">
-                    <h3>📄 Internship Portfolio</h3>
-                    <p>A responsive personal portfolio website showcasing my education, skills, and goals for internship applications.</p>
-                </div>
-            </div>
-        </section>
+            <button type="submit">Send Message ✉️</button>
+        </form>
+      </div>
+    </section>
 
-        <!-- CONTACT -->
-        <section id="contact">
-            <h2>✉️ Get In Touch</h2>
-            <form action="mailto:rhyiel@example.com" method="POST" enctype="text/plain">
-                <label for="name">Your Full Name</label>
-                <input type="text" id="name" name="name" required placeholder="Enter your name">
+  </main>
 
-                <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" required placeholder="your.email@example.com">
-
-                <label for="message">Your Message</label>
-                <textarea id="message" name="message" rows="4" required placeholder="Write your message here..."></textarea>
-
-                <button type="submit">Send Message ✉️</button>
-            </form>
-        </section>
-
-    </main>
-
-    <footer>
-        <p>&copy; 2026 Rhyiel Webster D Manuel. All rights reserved. 🌌💜✨</p>
-    </footer>
+  <footer>
+      <p>&copy; 2026 Rhyiel Webster D Manuel. All rights reserved. 🌌💜✨</p>
+  </footer>
 
 </body>
-                                                                                                                   </html>
+</html>
