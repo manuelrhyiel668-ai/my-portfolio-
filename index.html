@@ -2,144 +2,117 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Portfolio of Rhyiel Webster D Manuel, second-year BSIT student looking for an internship.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rhyiel Webster D Manuel | Internship Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- NAVIGATION -->
-  <aside class="sidebar">
-    <div class="sidebar-logo">
-        <h2>Rhyiel's Portfolio</h2>
-        <p>2nd-year BSIT • Intern Seeker</p>
-    </div>
-    <ul class="sidebar-nav">
-        <li><a href="#home">🏠 Home</a></li>
-        <li><a href="#about">👤 About</a></li>
-        <li><a href="#skills">🛠️ Skills</a></li>
-        <li><a href="#projects">📁 Projects</a></li>
-        <li><a href="#contact">✉️ Contact</a></li>
-    </ul>
-  </aside>
-
-  <main class="main-content">
-
-    <!-- HOME -->
-    <section id="home" class="hero-section">
-      <div class="container hero">
-        <div class="hero-copy">
-          <h1><span>Rhyiel</span> <span class="pop">Webster</span> <span>Manuel</span></h1>
-          <p class="tagline">Second-year BSIT student who builds clean, responsive websites</p>
-          <p class="intro">I am looking for an internship where I can apply what I have learned, work on real projects with a supportive team, and keep improving my skills. I enjoy turning ideas into clean, working web pages.</p>
-          <div class="actions">
-            <a class="btn solid" href="#projects">View my projects 🚀</a>
-            <a class="btn" href="#contact">Contact me ✉️</a>
-          </div>
+    <!-- TOP NAVIGATION BAR -->
+    <header class="top-nav">
+        <div class="nav-container">
+            <a href="#home" class="logo">RWM</a>
+            <nav class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
         </div>
-        <figure class="photo-frame">
-          <img class="hero-photo" src="profile.jpeg" alt="Photo of Rhyiel Webster Manuel">
-        </figure>
-      </div>
-    </section>
+        <div class="nav-gradient-line"></div>
+    </header>
 
-    <!-- ABOUT -->
-    <section id="about" class="section">
-      <div class="container">
-        <h2 class="section-title">About</h2>
-        <div class="about-grid">
-          <article class="box area-bio">
-            <h3>Biography</h3>
-            <p>I am Rhyiel Webster D Manuel, a second-year Bachelor of Science in Information Technology student at Nueva Vizcaya State University. I got into technology through curiosity about how apps and websites are made, and I now build small projects with HTML, CSS, and JavaScript. I like learning by making things and fixing my own mistakes.</p>
-          </article>
+    <main>
+        <!-- HERO SECTION -->
+        <section id="home" class="hero">
+            <div class="profile-ring">
+                <div class="profile-frame">
+                    <img src="mypicture.jpg" alt="Rhyiel Webster D Manuel" class="profile-img">
+                </div>
+            </div>
 
-          <article class="box area-edu">
-            <h3>Education</h3>
-            <ol class="timeline">
-              <li><b>Elementary</b><span>Nagcuartelan Elementary School</span></li>
-              <li><b>High School</b><span>Nueva Vizcaya Institute High School</span></li>
-              <li><b>Senior High School</b><span>Nueva Vizcaya Institute High School</span></li>
-              <li><b>College</b><span>Nueva Vizcaya State University, BS Information Technology (expected graduation: 2028)</span></li>
-            </ol>
-          </article>
+            <h1 class="hero-name">Rhyiel Webster D. Manuel</h1>
+            <p class="hero-title">Second-year BSIT student who builds clean, responsive websites</p>
+            <p class="hero-desc">I am looking for an internship where I can apply what I have learned, work on real projects with a supportive team, and keep improving my skills. I enjoy turning ideas into clean, working web pages.</p>
 
-          <article class="box area-goals">
-            <h3>Career Goals</h3>
-            <p>My goal is to start my career as a front-end developer through an internship, then grow into a full-stack role. I want to build websites and apps that are easy to use and that help students and people in my community.</p>
-          </article>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-gradient">View my projects</a>
+                <a href="#contact" class="btn btn-outline">Contact me</a>
+            </div>
+        </section>
 
-          <article class="box area-int">
-            <h3>Interests</h3>
-            <ul class="chips">
-              <li>Web design</li>
-              <li>Open source</li>
-              <li>Problem solving</li>
-              <li>Learning new tools</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
+        <!-- ABOUT SECTION -->
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section-title">About</h2>
+                <div class="card">
+                    <h3>Biography</h3>
+                    <p>I am Rhyiel Webster D Manuel, a second-year Bachelor of Science in Information Technology student at Nueva Vizcaya State University. I got into technology through curiosity about how apps and websites are made, and I now build small projects with HTML, CSS, and JavaScript. I like learning by making things and fixing my own mistakes.</p>
+                    
+                    <div class="info-list" style="margin-top: 1.5rem;">
+                        <p><strong>🏫 Education:</strong> Nueva Vizcaya State University (BSIT, expected graduation: 2028)</p>
+                        <p><strong>🎯 Career Goals:</strong> To start my career as a front-end developer through an internship, then grow into a full-stack role.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <!-- SKILLS -->
-    <section id="skills" class="section tinted">
-      <div class="container">
-        <h2 class="section-title">Skills</h2>
-        <div class="skills-grid">
-          <article class="box">
-            <h3>Programming languages</h3>
-            <ul class="chips"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
-          </article>
-          <article class="box">
-            <h3>Tools and technologies</h3>
-            <ul class="chips"><li>Git</li><li>GitHub</li><li>GitHub Desktop</li><li>VS Code</li><li>JSON</li></ul>
-          </article>
-          <article class="box">
-            <h3>Technical skills</h3>
-            <ul class="chips"><li>Responsive web design</li><li>Building web pages</li><li>Fetching data from APIs</li></ul>
-          </article>
-        </div>
-      </div>
-    </section>
+        <!-- SKILLS SECTION -->
+        <section id="skills" class="section">
+            <div class="container">
+                <h2 class="section-title">Skills</h2>
+                <div class="grid">
+                    <div class="card skill-card">
+                        <h3>Programming Languages</h3>
+                        <p>HTML, CSS, JavaScript</p>
+                    </div>
+                    <div class="card skill-card">
+                        <h3>Tools & Tech</h3>
+                        <p>Git, GitHub, VS Code, JSON</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <!-- PROJECTS -->
-    <section id="projects" class="section">
-      <div class="container">
-        <h2 class="section-title">Projects</h2>
-        <div class="skills-grid">
-          <article class="box">
-            <h3>📄 Internship Portfolio</h3>
-            <p>A responsive personal portfolio website showcasing my education, skills, and goals for internship applications.</p>
-          </article>
-        </div>
-      </div>
-    </section>
+        <!-- PROJECTS SECTION -->
+        <section id="projects" class="section">
+            <div class="container">
+                <h2 class="section-title">Projects</h2>
+                <div class="grid">
+                    <div class="card project-card">
+                        <h3>📄 Internship Portfolio</h3>
+                        <p>A responsive personal portfolio website showcasing my education, skills, and goals for internship applications.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <!-- CONTACT -->
-    <section id="contact" class="section">
-      <div class="container">
-        <h2 class="section-title">Get In Touch</h2>
-        <form action="mailto:rhyiel@example.com" method="POST" enctype="text/plain">
-            <label for="name">Your Full Name</label>
-            <input type="text" id="name" name="name" required placeholder="Enter your name">
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 class="section-title">Contact</h2>
+                <div class="card form-card">
+                    <form action="mailto:rhyiel@example.com" method="POST" enctype="text/plain">
+                        <label for="name">Your Full Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Enter your name">
 
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required placeholder="your.email@example.com">
 
-            <label for="message">Your Message</label>
-            <textarea id="message" name="message" rows="4" required placeholder="Write your message here..."></textarea>
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" rows="4" required placeholder="Write your message..."></textarea>
 
-            <button type="submit">Send Message ✉️</button>
-        </form>
-      </div>
-    </section>
+                        <button type="submit" class="btn btn-gradient full-width">Send Message ✉️</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
 
-  </main>
-
-  <footer>
-      <p>&copy; 2026 Rhyiel Webster D Manuel. All rights reserved. 🌌💜✨</p>
-  </footer>
+    <footer>
+        <p>&copy; 2026 Rhyiel Webster D Manuel. All rights reserved. 🌌💜✨</p>
+    </footer>
 
 </body>
 </html>
