@@ -1,110 +1,218 @@
-Html
+/* ===== Color theme: purple shades, defined once ===== */
+:root {
+  --ink: #1b0f33;        /* text and borders */
+  --purple: #7c3aed;     /* main purple */
+  --lilac: #e3d0ff;      /* soft purple fill */
+  --bg: #f6efff;         /* page background */
+  --surface: #ffffff;    /* boxes */
+  --on-purple: #ffffff;  /* text on purple */
+  --shadow: #1b0f33;     /* hard shadow color */
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Portfolio of Rhyiel Webster D Manuel, second-year BSIT student looking for an internship.">
-  <title>Rhyiel Webster D Manuel | Internship Portfolio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;800&family=Figtree:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+  --font-head: "Unbounded", system-ui, sans-serif;
+  --font-body: "Figtree", system-ui, sans-serif;
+  --nav-h: 68px;
+  --gap: 1.5rem;
+  --border: 3px solid var(--ink);
+}
 
-  <!-- NAVIGATION -->
-  <header class="site-header">
-    <a class="brand" href="#home">Rhyiel</a>
-    <nav id="mainMenu" class="main-menu" aria-label="Main menu">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <div class="header-tools">
-      <button id="themeToggle" class="round-btn" type="button" aria-label="Switch to dark theme">&#9790;</button>
-      <button id="menuToggle" class="menu-toggle" type="button" aria-expanded="false" aria-controls="mainMenu">Menu</button>
-    </div>
-  </header>
+:root[data-theme="dark"] {
+  --ink: #efe4ff;
+  --purple: #a78bfa;
+  --lilac: #2d1a55;
+  --bg: #120a24;
+  --surface: #1c1038;
+  --on-purple: #120a24;
+  --shadow: #7c3aed;
+}
 
-  <main>
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: calc(var(--nav-h) + 12px); }
+body { margin: 0; font-family: var(--font-body); font-size: 1.05rem; line-height: 1.7; color: var(--ink); background: var(--bg); }
+h1, h2, h3 { font-family: var(--font-head); line-height: 1.15; margin: 0 0 .7rem; }
+h3 { font-size: 1.05rem; }
+p { margin: 0 0 1rem; }
+a { color: var(--purple); font-weight: 600; text-decoration: none; }
+img { max-width: 100%; }
+:focus-visible { outline: 3px solid var(--purple); outline-offset: 3px; }
+.container { width: min(1120px, 92%); margin-inline: auto; }
 
-    <!-- HOME -->
-    <section id="home" class="hero-section">
-      <div class="container hero">
-        <div class="hero-copy">
-          <h1><span>Rhyiel</span> <span class="pop">Webster</span> <span>Manuel</span></h1>
-          <p class="tagline">Second-year BSIT student who builds clean, responsive websites</p>
-          <p class="intro">I am looking for an internship where I can apply what I have learned, work on real projects with a supportive team, and keep improving my skills. I enjoy turning ideas into clean, working web pages.</p>
-          <div class="actions">
-            <a class="btn solid" href="#projects">View my projects</a>
-            <a class="btn" href="#contact">Contact me</a>
-          </div>
-        </div>
-        <figure class="photo-frame">
-          <img class="hero-photo" src="images/mypicture.jpg" alt="Photo of Rhyiel Webster Manuel" width="360" height="360">
-          <figcaption class="sticker">2nd-year<br>BSIT</figcaption>
-        </figure>
-      </div>
-    </section>
+/* ===== Navigation (Sidebar / Header Layout) ===== */
+.site-header { 
+  position: sticky; top: 0; z-index: 20; 
+  display: flex; align-items: center; justify-content: space-between; 
+  gap: 1rem; height: var(--nav-h); padding: 0 4%; 
+  background: var(--surface); border-bottom: var(--border); 
+}
 
-    <!-- ABOUT -->
-    <section id="about" class="section">
-      <div class="container">
-        <h2 class="section-title">About</h2>
-        <div class="about-grid">
-          <article class="box area-bio">
-            <h3>Biography</h3>
-            <p>I am Rhyiel Webster D Manuel, a second-year Bachelor of Science in Information Technology student at Nueva Vizcaya State University. I got into technology through curiosity about how apps and websites are made, and I now build small projects with HTML, CSS, and JavaScript. I like learning by making things and fixing my own mistakes.</p>
-          </article>
+.brand { 
+  padding: .15rem .8rem; border: var(--border); border-radius: 10px; 
+  background: var(--purple); color: var(--on-purple); 
+  font: 800 1.15rem var(--font-head); text-decoration: none; 
+  box-shadow: 3px 3px 0 var(--shadow); 
+}
 
-          <article class="box area-edu">
-            <h3>Education</h3>
-            <ol class="timeline">
-              <li><b>Elementary</b><span>Nagcuartelan Elementary School</span></li>
-              <li><b>High School</b><span>nueva vizcaya institute High School</span></li>
-              <li><b>Senior High School</b><span>Nueva vizcaya institute High School</span></li>
-              <li><b>College</b><span>Nueva Vizcaya State University, BS Information Technology (expected graduation: 2028)</span></li>
-            </ol>
-          </article>
+.main-menu { display: flex; gap: .3rem; margin-left: auto; }
+.main-menu a { 
+  padding: .4rem .85rem; border: 2px solid transparent; border-radius: 999px; 
+  color: var(--ink); font-weight: 700; text-decoration: none; 
+  transition: background .15s, border-color .15s; 
+}
+.main-menu a:hover { background: var(--lilac); border-color: var(--ink); }
 
-          <article class="box area-goals">
-            <h3>Career goals</h3>
-            <p>My goal is to start my career as a front-end developer through an internship, then grow into a full-stack role. I want to build websites and apps that are easy to use and that help students and people in my community.</p>
-          </article>
+.header-tools { display: flex; gap: .5rem; }
+.round-btn { 
+  width: 42px; height: 42px; border: var(--border); border-radius: 50%; 
+  background: var(--lilac); color: var(--ink); font-size: 1.15rem; 
+  cursor: pointer; box-shadow: 3px 3px 0 var(--shadow); 
+}
+.round-btn:active { transform: translate(2px, 2px); box-shadow: 1px 1px 0 var(--shadow); }
 
-          <article class="box area-int">
-            <h3>Interests</h3>
-            <ul class="chips">
-              <li>Web design</li>
-              <li>Open source</li>
-              <li>Problem solving</li>
-              <li>Learning new tools</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
+.menu-toggle { 
+  display: none; padding: 0 1rem; height: 42px; border: var(--border); 
+  border-radius: 999px; background: var(--surface); color: var(--ink); 
+  font: 700 .95rem var(--font-body); cursor: pointer; 
+}
 
-    <!-- SKILLS -->
-    <section id="skills" class="section tinted">
-      <div class="container">
-        <h2 class="section-title">Skills</h2>
-        <div class="skills-grid">
-          <article class="box">
-            <h3>Programming languages</h3>
-            <ul class="chips"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
-          </article>
-          <article class="box">
-            <h3>Tools and technologies</h3>
-            <ul class="chips"><li>Git</li><li>GitHub</li><li>GitHub Desktop</li><li>VS Code</li><li>JSON</li></ul>
-          </article>
-          <article class="box">
-            <h3>Technical skills</h3>
-            <ul class="chips"><li>Responsive web design</li><li>Building web pages</li><li>Fetching data from APIs</li></ul>
-          </article>
-          <article class="box">
-  
+/* ===== Sidebar Compatibility (if using aside sidebar) ===== */
+.sidebar {
+  position: fixed; left: 0; top: 0; width: 240px; height: 100vh;
+  background: linear-gradient(180deg, var(--purple), var(--secondary, #6d28d9));
+  color: white; padding: 2rem 1.5rem; display: flex; flex-direction: column;
+  align-items: center; text-align: center; border-right: var(--border); z-index: 100;
+}
+.sidebar-logo h2 { font-size: 1.4rem; margin-bottom: 0.5rem; color: #fff; }
+.sidebar-logo p { font-size: 0.85rem; opacity: 0.85; margin-bottom: 2rem; }
+.sidebar-nav { list-style: none; width: 100%; padding: 0; }
+.sidebar-nav li { margin-bottom: 0.6rem; }
+.sidebar-nav a {
+  color: white; text-decoration: none; display: block; padding: 0.8rem 1rem;
+  border-radius: 8px; transition: all 0.3s ease; font-size: 0.95rem; font-weight: 600;
+}
+.sidebar-nav a:hover { background: rgba(255, 255, 255, 0.2); transform: translateX(5px); }
+.main-content { margin-left: 240px; min-height: 100vh; }
+
+@media (max-width: 768px) {
+  .sidebar { position: relative; width: 100%; height: auto; flex-direction: row; flex-wrap: wrap; justify-content: space-between; }
+  .main-content { margin-left: 0; }
+}
+
+/* ===== Sections ===== */
+.section { padding: 5rem 0; }
+.tinted { background: var(--lilac); border-block: var(--border); }
+.section-title { 
+  display: inline-block; margin-bottom: 2.2rem; padding: .3rem 1.1rem; 
+  border: var(--border); border-radius: 12px; background: var(--purple); 
+  color: var(--on-purple); font-size: clamp(1.4rem, 4vw, 2rem); 
+  transform: rotate(-1.5deg); box-shadow: 5px 5px 0 var(--shadow); 
+}
+.sub-title { margin-top: 3.2rem; font-size: 1.3rem; }
+
+.box { 
+  background: var(--surface); border: var(--border); border-radius: 16px; 
+  padding: 1.4rem 1.6rem; box-shadow: 6px 6px 0 var(--shadow); 
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.box:hover { transform: translateY(-3px); box-shadow: 8px 8px 0 var(--shadow); }
+.box p:last-child { margin-bottom: 0; }
+
+/* ===== Home / Hero ===== */
+.hero-section { padding: 4.5rem 0 5rem; }
+.hero { display: grid; grid-template-columns: 1.3fr 1fr; gap: 3rem; align-items: center; }
+
+h1 { 
+  display: flex; flex-direction: column; font-size: clamp(2.6rem, 8vw, 5rem); 
+  font-weight: 800; line-height: 1; letter-spacing: -.02em; margin-bottom: 1.4rem; 
+}
+h1 .pop { color: var(--purple); text-shadow: 2px 2px 0 var(--shadow); }
+
+.tagline { 
+  display: inline-block; padding: .3rem .9rem; border: var(--border); 
+  border-radius: 10px; background: var(--lilac); font-weight: 700; 
+  box-shadow: 3px 3px 0 var(--shadow);
+}
+.intro { max-width: 58ch; }
+
+.actions { display: flex; flex-wrap: wrap; gap: .9rem; margin-top: 1.6rem; }
+.btn { 
+  display: inline-block; padding: .75rem 1.5rem; border: var(--border); 
+  border-radius: 12px; background: var(--surface); color: var(--ink); 
+  font: 700 1rem var(--font-body); text-decoration: none; cursor: pointer; 
+  box-shadow: 4px 4px 0 var(--shadow); transition: transform .12s, box-shadow .12s; 
+}
+.btn:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--shadow); }
+.btn:active { transform: translate(3px, 3px); box-shadow: 1px 1px 0 var(--shadow); }
+.btn.solid { background: var(--purple); color: var(--on-purple); }
+
+.photo-frame { 
+  position: relative; justify-self: center; margin: 0; 
+  width: min(340px, 78vw); transform: rotate(3deg); 
+}
+.hero-photo { 
+  display: block; width: 100%; aspect-ratio: 1; object-fit: cover; 
+  border: var(--border); border-radius: 24px; background: var(--purple); 
+  box-shadow: 10px 10px 0 var(--shadow); 
+}
+
+/* Completed Sticker Style */
+.sticker { 
+  position: absolute; left: -22px; bottom: -22px; display: grid; 
+  place-items: center; width: 104px; height: 104px; border: var(--border); 
+  border-radius: 50%; background: var(--lilac); color: var(--ink); 
+  font-family: var(--font-head); font-weight: 800; font-size: 0.9rem; 
+  text-align: center; line-height: 1.1; box-shadow: 4px 4px 0 var(--shadow);
+  transform: rotate(-12deg); z-index: 5;
+}
+
+/* ===== Grids & Chips ===== */
+.about-grid, .skills-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem;
+}
+
+.timeline { list-style: none; padding-left: 0; }
+.timeline li { margin-bottom: 0.8rem; padding-left: 1rem; border-left: 3px solid var(--purple); }
+.timeline li b { display: block; color: var(--purple); font-family: var(--font-head); }
+
+.chips { display: flex; flex-wrap: wrap; gap: 0.5rem; list-style: none; padding: 0; margin-top: 0.5rem; }
+.chips li { 
+  background: var(--lilac); color: var(--ink); padding: 0.35rem 0.85rem; 
+  border-radius: 20px; font-size: 0.88rem; font-weight: 700; border: 2px solid var(--ink); 
+  box-shadow: 2px 2px 0 var(--shadow);
+}
+
+/* ===== Contact Form Styling ===== */
+form {
+  max-width: 520px; margin: 0 auto; background: var(--surface);
+  padding: 2.5rem; border: var(--border); border-radius: 16px;
+  box-shadow: 8px 8px 0 var(--shadow);
+}
+form label { display: block; margin-bottom: 0.5rem; font-weight: 700; color: var(--ink); font-size: 0.98rem; }
+form input, form textarea {
+  width: 100%; padding: 0.9rem; margin-bottom: 1.2rem;
+  border: var(--border); border-radius: 10px; background: var(--bg);
+  font-size: 0.98rem; font-family: var(--font-body); color: var(--ink);
+  transition: border-color 0.2s ease;
+}
+form input:focus, form textarea:focus { outline: none; border-color: var(--purple); }
+form textarea { resize: vertical; min-height: 120px; }
+form button {
+  width: 100%; background: var(--purple); color: var(--on-purple);
+  border: var(--border); padding: 0.9rem 2rem; border-radius: 10px;
+  font-weight: 800; font-family: var(--font-head); cursor: pointer;
+  box-shadow: 4px 4px 0 var(--shadow); transition: transform 0.1s, box-shadow 0.1s;
+}
+form button:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--shadow); }
+form button:active { transform: translate(2px, 2px); box-shadow: 2px 2px 0 var(--shadow); }
+
+/* ===== Footer ===== */
+footer {
+  background: var(--surface); color: var(--ink); text-align: center;
+  padding: 2rem; border-top: var(--border); font-weight: 600;
+}
+
+/* ===== Responsive Adjustments ===== */
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; text-align: center; }
+  .hero-copy { display: flex; flex-direction: column; align-items: center; }
+  .intro { text-align: center; }
+  .actions { justify-content: center; }
+         }
